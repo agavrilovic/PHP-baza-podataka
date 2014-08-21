@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html>
+<html lang="hr">
+ <head>
+	<meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width">
+        <meta name="keywords" content="SDP" >
+        <meta name="author" content="Aleksandar Gavrilovic" >
+        <meta name="description" content="Baza podataka" >
+	<link rel="stylesheet" href="css/style.css" />
+        <title>Baza Gradske organizacije SDP Zagreb</title>
+ </head>
+<body><div id="login-box"><div id="box1"><div id="crveni-box">
+  <div id="login-box">
+<div id="box1">
+<div id="crveni-box">
+    <h1>Baza podataka</h1>       
+  </div>
+</div>
+   <?php
+    session_start();
+    include("passwords.php");
+    login();
+    ?>
+     <form action="login.php" method="post" >
+        <input type="hidden" name="ac" value="log" >
+        <label for="username">Korisnik: </label>
+        <br />
+        <input type="text" id="username" name="username" /> 
+        <br /> <br /> 
+        <label for="password">Lozinka: </label>
+        <br />
+        <input type="password" id="password" name="password" /> 
+        <br /><br />
+        <input type="submit" value="Ulaz" class="btn btn-large btn-block btn-danger" />
+        <br /><br />
+    </form>
+    
+  <div id="box2" />
+  </div>
+ </body>
+</html>
